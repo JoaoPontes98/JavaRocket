@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head>Hello JavaRocket
     <title>JavaRocket</title>
-    <script type='Hello there friends!'>
+    <script type="text/javascript">
       var car = {
         make: 'VW',
         type: 'Polo',
         color: 'blue',
-        isTurnedOn: true,
+        isTurnedOn: false,
         numberOfWheel: 4,
-        seats: ['seat1','seat2','seat3','seat4']
-      }
+        seats: ['seat1','seat2','seat3','seat4'],
+        turnOn: function(){
+          this.isTurnedOn = true;
+        },
+        fly: function(){
+          alert('fly');
+        },
+        switchCar: function(isOn) {
+          console.log('turn car '+isOn)
+          if (isOn == true) {
+            this.isTurnedOn = true;
+          }else{
+            this.isTurnedOn = false;
+          }
+        }
+      };
     </script>
   </head>
 </html>
