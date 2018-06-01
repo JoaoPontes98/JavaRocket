@@ -1,3 +1,60 @@
-body{
-  background-color: grey;
+.left{
+  background-color: coral;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
+
+.right{
+  background-color: aquamarine;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.ground{
+  background-color: green;
+  position: fixed;
+  width: 50%;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+}
+
+.rocket{
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  height: 100px;
+  transition: 10s;
+  -webkit-transform: translate(-50%, 0);
+}
+
+body.body-state1 .rocket{
+  transition: none;
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+  bottom: 1000px;
+}
+
+.state1,
+.state2,
+.state3,
+.state4,
+.state5{
+  display: none;
+}
+
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}

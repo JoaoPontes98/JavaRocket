@@ -1,3 +1,13 @@
+var coolStuff = function (){
+  var currentClassName = document.getElementById('cool').className;
+
+  if (currentClassName == 'cool'){
+    currentClassName = document.getElementById('cool').className = 'cool red';
+  }else{
+    currentClassName = document.getElementById('cool').className = 'cool';
+  }
+
+}
 var car = {
   make: 'VW',
   type: 'Polo',
